@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login / Signup Section -->
+    <section id="login-section">
+        <h1>Welcome to Online Learning</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="login-btn">Login</button>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-section" class="hidden">
+        <h2>Hello, <span id="user-name"></span>! Choose a course:</h2>
+        <div class="courses-container">
+            <div class="course-card" data-course="html">
+                <h3>HTML Basics</h3>
+                <div class="progress-bar"><div class="progress-fill" id="html-progress"></div></div>
+                <button class="start-course-btn">Start Course</button>
+            </div>
+            <div class="course-card" data-course="css">
+                <h3>CSS Fundamentals</h3>
+                <div class="progress-bar"><div class="progress-fill" id="css-progress"></div></div>
+                <button class="start-course-btn">Start Course</button>
+            </div>
+            <div class="course-card" data-course="js">
+                <h3>JavaScript Essentials</h3>
+                <div class="progress-bar"><div class="progress-fill" id="js-progress"></div></div>
+                <button class="start-course-btn">Start Course</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section id="course-section" class="hidden">
+        <h2 id="course-title"></h2>
+        <iframe id="course-video" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+        <p id="course-desc"></p>
+        <button id="take-quiz-btn">Take Quiz</button>
+        <button id="back-dashboard-btn">Back to Dashboard</button>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="hidden">
+        <h2 id="quiz-title"></h2>
+        <form id="quiz-form"></form>
+        <button id="submit-quiz-btn">Submit Quiz</button>
+        <button id="back-course-btn">Back to Course</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
